@@ -2,7 +2,7 @@
 <!-- <ion-content> -->
     <div class="margin-left">
         <div class="dropdown">
-            <button class="dropbtn" value="menuOne" (click)="menuOne()">Menu 1</button>
+            <button class="dropbtn" (click)="menuOne()">Menu 1</button>
             <div class="dropdown-content">
               <a href="#">
               <div>
@@ -91,30 +91,16 @@
               </div>
             </div>
 
-            <!-- <div [ngSwitch]="'HomePage'">
-              <div *ngSwitchCase="'menuOne'">
-                <app-menu-one></app-menu-one>
-              </div>
-              <br>
-              <div *ngSwitchCase="'menuTwo'">
-                <app-menu-two></app-menu-two>
-              </div>
-              <br>
-              <div *ngSwitchCase="'menuThree'">
-                <app-menu-three></app-menu-three>
-              </div>
-              <br>
-              <div *ngSwitchCase="'menuFour'">
-                <app-menu-four></app-menu-four>
-              </div>
-              <br>
-            </div> -->
-            <div>
-                <app-menu-one></app-menu-one>
-            </div>
-
 
             
+            <div class="margin-bottom">
+                <app-menu-one *ngIf="menuID==1"></app-menu-one>
+                <app-menu-two *ngIf="menuID==2"></app-menu-two>
+                <app-menu-three *ngIf="menuID==3"></app-menu-three>
+                <app-menu-four *ngIf="menuID==4"></app-menu-four>
+
+              </div>
+    
             <!-- </ion-content> -->
         
   

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Events } from '@ionic/angular';
 
 @Component({
   selector: 'app-home-page',
@@ -7,27 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  data = 'HomePage';
+  menuID:any
+  constructor(private events:Events) { 
 
-  constructor() { }
+    this.events.subscribe('menuID',menuId =>{
+      this.menuID = menuId;
+    })
+  }
 
   ngOnInit() {}
 
   menuOne(){
-    // this.router.navigateByUrl('/menu-one')
-    if(this.data=='menuOne'){
-        console.log("sdf");
-        
-    }
+      this.events.publish('menuID',1)
   }
   menuTwo(){
-
+    this.events.publish('menuID',2)
   }
   menuThree(){
-
+    this.events.publish('menuID',3)
   }
   menuFour(){
-
+    this.events.publish('menuID',4)
   }
 
 }
