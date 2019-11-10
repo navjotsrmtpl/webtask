@@ -9,17 +9,17 @@ import { PageFourComponent } from './page-four/page-four.component';
 const routes: Routes = [
   // { path: '', redirectTo: 'home', pathMatch: 'full' },
   // { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
-  // { path: 'menu-one', loadChildren: './menu-one/menu-one.module#MenuOnePageModule' },
-  // { path: 'menu-one', loadChildren: './menu-one/menu-one.module#MenuOnePageModule' },
-  // { path: 'menu-two', loadChildren: './menu-two/menu-two.module#MenuTwoPageModule' },
-  // { path: 'menu-three', loadChildren: './menu-three/menu-three.module#MenuThreePageModule' },
-  // { path: 'menu-four', loadChildren: './menu-four/menu-four.module#MenuFourPageModule' },
   {path:'',redirectTo:'home', pathMatch: 'full' },
   {path:'home',component:HomePageComponent},
-  {path:'pageOne',component:PageOneComponent},
-  {path:'pageTwo',component:PageTwoComponent},
-  {path:'pageThree',component:PageThreeComponent},
-  {path:'pageFour',component:PageFourComponent},
+  { path: 'menu-one', loadChildren: './menu-one/menu-one.module#MenuOnePageModule' },
+  { path: 'menu-one', loadChildren: './menu-one/menu-one.module#MenuOnePageModule' },
+  { path: 'menu-two', loadChildren: './menu-two/menu-two.module#MenuTwoPageModule' },
+  { path: 'menu-three', loadChildren: './menu-three/menu-three.module#MenuThreePageModule' },
+  { path: 'menu-four', loadChildren: './menu-four/menu-four.module#MenuFourPageModule' },
+  // {path:'pageOne',component:PageOneComponent},
+  // {path:'pageTwo',component:PageTwoComponent},
+  // {path:'pageThree',component:PageThreeComponent},
+  // {path:'pageFour',component:PageFourComponent},
 ];
 
 @NgModule({
