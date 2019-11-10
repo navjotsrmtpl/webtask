@@ -24,6 +24,9 @@ const routes: Routes = [
   declarations: [MenuOnePage],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
+  ],
+  exports:[
+    MenuOnePage
   ]
 })
 export class MenuOnePageModule {}

@@ -21,6 +21,9 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [MenuThreePage]
+  declarations: [MenuThreePage],
+  exports:[
+    MenuThreePage
+  ]
 })
 export class MenuThreePageModule {}

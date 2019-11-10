@@ -12,10 +12,16 @@ import { MenuOnePageModule } from './menu-one/menu-one.module';
 import { MenuTwoPageModule } from './menu-two/menu-two.module';
 import { MenuThreePageModule } from './menu-three/menu-three.module';
 import { MenuFourPageModule } from './menu-four/menu-four.module';
+import { HomePageComponent } from './home-page/home-page.component';
+import { PageOneComponent } from './page-one/page-one.component';
+import { PageTwoComponent } from './page-two/page-two.component';
+import { PageThreeComponent } from './page-three/page-three.component';
+import { PageFourComponent } from './page-four/page-four.component';
+
 
 @NgModule({
   declarations: [AppComponent,
-
+    HomePageComponent,PageOneComponent,PageTwoComponent,PageThreeComponent,PageFourComponent
   ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
@@ -29,7 +35,7 @@ import { MenuFourPageModule } from './menu-four/menu-four.module';
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
-  bootstrap: [AppComponent,    
+  bootstrap: [AppComponent,HomePageComponent,PageOneComponent,PageTwoComponent,PageThreeComponent,PageFourComponent
 ],
 schemas: [
   CUSTOM_ELEMENTS_SCHEMA
